@@ -1,0 +1,126 @@
+.bannerimg {
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+}
+.bannerleft.bannerinner {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.bannercontent {
+	width: 50%;
+}
+.bannersection .container-fluid {
+	display: flex;
+}
+/*****sweta mama****/
+/* .bannerimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 70%;
+} */
+.bannerleft.bannerinner {
+	width: 100%;
+	height: 545px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* .bannercontent {
+    width: 40%;
+    padding:60px 55px 60px 0;
+    margin: 55px 0;
+    overflow: hidden;
+} */
+
+
+
+/*********privacy policy***/
+.privacycls h3 {
+	font-size: 23px !important;
+	font-weight: 700 !important;
+	margin-bottom: 1em !important;
+	margin-top: 0 !important;
+	line-height: 1.2em;
+}
+.privacycls  p {
+	font-size: 14px !important;
+	margin: 15px 0 !important;
+}
+.privacycls h1 {
+	margin-bottom: 1em !important;
+}
+.has-text-align-center {
+	margin-top: 1em !important;
+	color: white !important;
+}
+label {
+	font-size: 18px !important;
+	color: #091540;
+	display: block;
+	font-weight: 600 !important;font-family: Avenir Next LT Pro,sans-serif;
+}
+.um.um-login.um-284.uimob500 {
+	margin: 0 !important;
+}
+.um-field-area input {
+	margin-bottom: 2em;
+	background-color: #f5f5f5 !important;
+	border-radius: 1.4em !important;
+	color: #444;
+	font-family: Avenir Next LT Pro,sans-serif;
+	line-height: 1.75em;
+	display: block;
+	padding: .375em 1.2em;
+	height: 2.5em;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	border: 0px !important;
+}
+
+.um-row._um_row_1, .um-col-alt {
+	width: 640px;
+	max-width: 100%;
+}
+#um_field_284_um_block_284_4 {
+	font-family: Avenir Next LT Pro,sans-serif;
+	font-size: 14px;
+}
+
+#um-submit-btn {
+	background-color: #fd6c69;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 1.4em !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box;
+	padding: .375em 1.2em !important;
+	height: 2.5em !important;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+	line-height: 1.75em !important;
+}
+.um-button.um-alt {
+	border: 2px solid #fdac44;
+color: #fdac44;
+background-color: transparent;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 1.4em !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box;
+	padding: .375em 1.2em !important;
+	height: 2.5em !important;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;	font-family: Avenir Next LT Pro,sans-serif;
+	line-height: 1.75em !important;
+}

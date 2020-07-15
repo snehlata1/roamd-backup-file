@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>United state</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+// Add the new slick-theme.css if you want the default styling
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.main-column {
+	display: flex;
+	flex-wrap: wrap;
+}
+.main-column2 {
+	width: 30%;
+}
+.main-column1 {
+	width: 70%;
+}
+.column-state {
+	display: flex;flex-wrap: wrap;
+}
+.inner-column1, .inner-column2, .inner-column3 {
+	width: 33.33%;
+}
+.main-heading h2 {
+	color: #0038de;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 600;
+	margin-bottom: 1em;
+}
+.main-column h3 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 600;
+	color: #7a838e;
+}
+.text {
+	font-size: 18px;
+	padding: .5em 0;
+	color: #7a838e;
+	font-weight: 400;
+}
+.discription {
+	color: #7a838e;
+}
+.more-cities {
+	font-size: 30px;
+	font-weight: 600;
+	color: #003bde;
+	margin: 1.5em 0;text-align:center;width:100%;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.8s;
+  background: transparent;
+  font-size: 18px;
+color: #0038de;
+font-weight: bolder;
+line-height: 24px;
+padding-top: 6px;
+margin-bottom: 1em;position: relative;padding-left:100px;
+}
+
+
+.accordion::after {
+	content: '\002B';
+	color: #0038de;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+	transition: content 0.3s ease-out;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	border: 2px solid #0038de;
+	position: absolute;
+	left: 15px;
+	top: 5px;text-align: center;
+}
+.panel p {
+	color: #7a838e;
+}
+.active:after {
+  content: "\2212";
+  transition:content 0.3s ease-out;
+}
+
+.panel {
+  padding: 0 18px;
+ 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.main-acord{background: #f5f5f5;}
+.main-acord h1{text-align:center;}
+.accord-1 {
+	display: flex;
+}
+.acord-box1, .acord-box2 {
+	width: 100%;
+	margin-right: 20px;
+}
+
+.modal-box img, .modal-box2 img {
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+}
+.modal-box {
+	display: flex;
+}
+.modal-box1 {
+	width: 25%;
+	margin-right: 20px;text-align:center;
+}
+.modal-box1:last-child{
+	margin-right: 0px;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background-color: #000;
+}
+.modal-dialog {
+	width: 80%;
+	margin: 30px auto;height:auto;
+}
+.inner-modal {
+	display: flex;height:100%;padding: 96px;
+}
+.modal-content {
+	height: 100%;
+}
+.modal-body {
+	width: 50%;text-align: left;
+}
+.modal-header {
+	width: 50%;border:0px;
+}
+.modal-meet h1 {
+	text-align: center;
+	color: #091540;
+	font-size: 48px;
+	font-weight: 700;
+}
+#roamd-text{margin-bottom:30px;text-align:center;}
+.modal-meet{background:#f5f5f5;padding:50px 0;}
+.modal-img img {
+	border-radius: 50%;
+	cursor: pointer;
+	height: 120px;
+	margin-bottom: 7px;
+	width: 120px;
+}
+.heading-modal h3 {
+	font-size: 18px;
+	color: #0038de;
+}
+.modal-meet h6 {
+	color: #7a838e;
+	font-size: 14px;
+}
+.modal-body span {
+	display: block;
+	margin: 20px 0;
+}
+.modal-body p{color: #7a838e;}
+.btn.btn-default {
+	background-color: #fd6c69;
+    border-color:#fd6c69;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 1.4em;
+	line-height: 1.75em;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box;
+	padding: .375em 1.2em;
+	height: 2.5em;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+}
+.modal-body h2 {
+	font-size: 36px;
+	font-weight: 600;
+}
+.modal-box2 {
+	display: flex;
+	justify-content: center;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+<div class="main-column">
+<div class="main-column1">
+    <div class="main-heading">
+        <h2>United States</h2>
+    </div>
+    <div class="column-state">
+    <div class="inner-column1">
+        <div class="box1">
+            <h3>Alabama</h3>
+            <div class="text">Mobile</div>
+        </div>
+        <div class="box2">
+            <h3>Alaska</h3>
+            <div class="text">Anchorage</div>
+        </div>
+        <div class="box3">
+            <h3>Arizona</h3>
+            <div class="text">Scottsdale</div>
+        </div>
+        <div class="box4">
+            <h3>California</h3>
+            <div class="text">Los Angeles</div>
+            <div class="text">Palo Alto</div>
+            <div class="text">San Diego</div>
+            <div class="text">San Francisco</div>
+            <div class="text">Silicon Valley</div>
+            <div class="text">Woodside</div>
+        </div>
+        <div class="box5">
+            <h3>Colorado</h3>
+            <div class="text">Boulder</div>
+            <div class="text">Denver</div>
+            <div class="text">Longmont</div>         
+        </div>
+        <div class="box6">
+            <h3>Connecticut</h3>
+            <div class="text">Danbury</div>
+            <div class="text">New Canaan</div>      
+        </div>
+        <div class="box7">
+            <h3>Florida</h3>
+            <div class="text">Boca Raton</div>
+            <div class="text">Fort Lauderdale</div>
+            <div class="text">Fort Myers</div>
+            <div class="text">Hollywood</div>
+            <div class="text">Jupiter</div>
+            <div class="text">Longwood</div>
+            <div class="text">Lutz</div>
+            <div class="text">Miami Beach</div>
+            <div class="text">Ocala</div>
+            <div class="text">Orlando</div>
+            <div class="text">West Palm Beach</div>
+            <div class="text">Panama City Beach</div>
+            <div class="text">Ponte Vedra</div>
+            <div class="text">Sanford</div>
+            <div class="text">St. Petersburg</div>
+            <div class="text">Tampa</div>
+        </div>
+        <div class="box8">
+            <h3>Georgia</h3>
+            <div class="text">Alpharetta</div>
+            <div class="text">Atlanta</div>
+            <div class="text">Savannah</div>         
+        </div>
+    </div>
+    <div class="inner-column2">
+        <div class="box1">
+            <h3>Illinois</h3>
+            <div class="text">Chicago</div>
+            <div class="text">Oak Brook</div>        
+        </div>
+        <div class="box2">
+            <h3>Indiana</h3>
+            <div class="text">Fishers</div>
+            <div class="text">Greenwood</div>
+            <div class="text">Indianapolis</div>         
+        </div>
+        <div class="box3">
+            <h3>Iowa</h3>
+            <div class="text">Des Moines</div>      
+        </div>
+        <div class="box4">
+            <h3>Kansas</h3>
+            <div class="text">Kansas City</div>
+            <div class="text">Overland Park</div>        
+        </div>
+        <div class="box5">
+            <h3>Kentucky</h3>
+            <div class="text">Crestview Hills</div>      
+        </div>
+        <div class="box6">
+            <h3>Louisiana</h3>
+            <div class="text">Baton Rouge</div>      
+        </div>
+        <div class="box7">
+            <h3>Massachusetts</h3>
+            <div class="text">Boston</div>
+            <div class="text">Wayland</div>
+            <div class="text">Weston</div>         
+        </div>
+        <div class="box8">
+            <h3>Michigan</h3>
+            <div class="text">Detroit</div>
+            <div class="text">Grand Rapids</div>
+            <div class="text">Troy</div>         
+        </div>
+        <div class="box9">
+            <h3>Nebraska</h3>
+            <div class="text">Omaha</div>      
+        </div>
+        <div class="box10">
+            <h3>Nevada</h3>
+            <div class="text">Las Vegas</div>      
+        </div>
+        <div class="box11">
+            <h3>New Jersey</h3>
+            <div class="text">Fairfield</div>
+            <div class="text">Newark</div>        
+        </div>
+        <div class="box12">
+            <h3>New Mexico</h3>
+            <div class="text">Albuquerque</div>      
+        </div>
+        <div class="box13">
+            <h3>New York</h3>
+            <div class="text">New York City</div>      
+        </div>
+    </div>
+    <div class="inner-column3">
+        <div class="box1">
+            <h3>North Carolina</h3>
+            <div class="text">Charlotte</div>
+            <div class="text">Durham</div> 
+            <div class="text">Greenville</div>
+            <div class="text">Raleigh</div>   
+            <div class="text">Wilmington</div>         
+        </div>
+        <div class="box2">
+            <h3>Ohio</h3>
+            <div class="text">Cincinnati</div>
+            <div class="text">Cleveland</div>
+            <div class="text">Columbus</div>         
+        </div>
+        <div class="box3">
+            <h3>Oregon</h3>
+            <div class="text">Bend</div>      
+        </div>
+        <div class="box4">
+            <h3>Pennsylvania</h3>
+            <div class="text">Newtown</div>    
+        </div>
+        <div class="box5">
+            <h3>South Carolina</h3>
+            <div class="text">Charleston</div>      
+        </div>
+        <div class="box6">
+            <h3>Tennessee</h3>
+            <div class="text">Brentwood</div>   
+            <div class="text">Nashville</div>     
+        </div>
+        <div class="box7">
+            <h3>Texas</h3>
+            <div class="text">Austin</div>
+            <div class="text">North Carrollton</div>
+            <div class="text">Dallas</div>  
+            <div class="text">Fort Worth</div>
+            <div class="text">South Lake</div>        
+        </div>
+        <div class="box8">
+            <h3>Utah</h3>
+            <div class="text">Park City</div>
+            <div class="text">Salt Lake City</div>       
+        </div>
+        <div class="box9">
+            <h3>Virginia</h3>
+            <div class="text">Alexandria</div>    
+            <div class="text">Richmond</div>     
+        </div>
+        <div class="box10">
+            <h3>Washington</h3>
+            <div class="text">Seattle</div>      
+        </div>
+        <div class="box11">
+            <h3>Washington, D.C.</h3>       
+        </div>
+        <div class="box12">
+            <h3>Wisconsin</h3>
+            <div class="text">Mequon</div>    
+            <div class="text">Milwuakee</div>     
+        </div>
+    </div>
+    </div>
+</div>
+<div class="main-column2">
+    <div class="main-heading">
+        <h2>Select International</h2>
+    </div>
+    <div class="box1">
+        <h3>Canada</h3>
+        <div class="text">Vancouver, BC</div>       
+    </div>
+    <div class="box2">
+        <h3>Hong Kong</h3> 
+    </div>
+    <div class="box3">
+        <h3>United Kingdom</h3>
+        <div class="text">London</div>       
+    </div>
+    <div class="discription">
+        <i>A growing list of select international cities are also part of the ROAMD network.</i>
+        <div class="commited">Committed practices as of 2020.</div>
+    </div>
+   
+</div>
+<div class="more-cities">More cities are being added to our network all the time.</div>
+</div>
+<div class="main-acord">
+    <h1>Frequently Asked Questions</h1>
+<div class="accord-1">
+    
+    <div class="acord-box1">
+<button class="accordion">How do I know if my doctor is in the network?</button>
+<div class="panel">
+  <p>Call your physician and ask them if they have been contacted by a ROAMD representative. If you’d like 
+      for someone here to reach out to your practice, email us at ​info@roamd.com​.</p>
+</div>
+
+<button class="accordion">I travel to a few cities frequently. How do I know if they’re covered?</button>
+<div class="panel">
+  <p>A full list of covered cities is available ​here. If you don’t see the cities you’re interested in, 
+      send us an email and we’ll see what we can do to solve that for you.</p>
+</div>
+
+<button class="accordion">Is my family covered?</button>
+<div class="panel">
+  <p> Absolutely. The only thing worse than feeling sick when traveling is knowing that a loved one is away from home and feeling the same. As long as they
+       are also members at your practice and 18 or older, just enter their info at sign-up.</p>
+</div>
+</div>
+<div class="acord-box2">
+<button class="accordion">How quickly will I get an appointment?</button>
+<div class="panel">
+  <p>We can’t guarantee a timeframe, but know that our network is built by members who are committed to extraordinary access to
+       patient care. They know you don’t feel good and they want to remedy that, ASAP.</p>
+</div>
+
+<button class="accordion">What if I get sick in a city that isn’t covered?</button>
+<div class="panel">
+  <p> ROAMD’s mission is to provide travel assurance around the globe. And while not every city has a private medicine physician that lives up to our standards, our network does strive to provide access to care (whether it’s sharing local knowledge about urgent care 
+      options or speaking to experiences with different specialists) in most locations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-meet">
+<h1>Meet our physician’s advisory council</h1>
+<h6 id="roamd-text">ROAMD was created by doctors for doctors and their patients. 
+    It is led by some of the most respected physicians in concierge and membership medicine.</h6>
+<div class="modal-box">
+    <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal2">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Jordan Shlain, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Private Medical<br>
+            San Francisco, CA</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Jordan Shlain, M.D.</h2>
+            <p><span>Private Medical | San Francisco, CA</span>
+
+                Dr. Jordan Shlain is the founder and managing partner of <a href="#">Private Medical</a>, a referral-only private practice office in San Francisco, Silicon Valley and Los Angeles established in 2002. Private Medical was recently highlighted on the front page of the New York Times Business section as the best-in-class medical practice for individuals and families that value health as their most valuable asset. Their twenty-one physicians integrate internal medicine, pediatrics, naturopathic & gynecologic medicine to ensure a highly personal medical experience that emphasizes proactive prevention, surveillance and rapid response teams during crises both big and small.
+                 Dr. Shlain is an active advisor to many Silicon Valley companies that help solve real problems for real doctors.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal3">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Matt Priddy, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Priority Physicians<br>
+            Indianapolis, IN</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Matt Priddy, M.D.</h2>
+            <p><span>Priority Physicians Indianapolis, IN</span>
+                Dr. Matthew Priddy has been practicing private medicine since 2003, and is the President of Indianapolis-based Priority Physicians. Priority Physicians is one of the largest private medicine practices in the Midwest with two locations and seven physicians currently. He has served multiple roles nationally in the American Academy of Private Physicians, and served as its President from 2013-2015. He is currently active with the Direct Primary Care Coalition and has traveled to Washington on multiple occasions to lobby for legislation that encourages alternative payment models in the delivery of primary care. Dr. Priddy is also a member of the AAFP, Indiana State Medical Society, and Indianapolis Medical Society. He serves on the Indianapolis board for the Leukemia and Lymphoma Society and was named their Man of the Year award recipient in 2014. Dr. Priddy attended Indiana University in Bloomington, Indiana before moving 60 miles north to attend the Indiana University School of Medicine in Indianapolis.
+                 He completed his training in Family Medicine at St. Vincent hospital, where he served as chief resident in his final year.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModals">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Cari Dawson, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Colorado Center of Medical Excellence<br>
+            Denver, CO</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModals" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Cari Dawson, M.D.</h2>
+            <p><span>Colorado Center of Medical Excellence
+                Denver, CO</span>
+
+                Dr. Cari Dawson has practiced Internal Medicine in Denver, Colorado since 2001 and in 2016 co-founded the Colorado Center of Medical Excellence. She graduated from the University of Colorado Health Sciences Center where she was elected into the national medical honor society Alpha Omega Alpha. She completed residency at UCHSC where she received multiple awards for excellence in Internal Medicine and served an additional year as Chief Resident. Dr. Dawson has a clinical faculty appointment at UCHSC and has mentored many residents
+                 and medical students. She is passionate about transforming her patients healthcare experience.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal4">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>James Pinckney II, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Diamond Physicians<br>
+            Forth Worth, TX</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal4" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>James Pinckney II, M.D.</h2>
+            <p><span>Diamond Physicians Forth Worth, TX</span>
+
+                Dr. James Pinckney studied general surgery at Cedars-Sinai Medical Center after graduating from Baylor College. He switched to family medicine to pursue his dream of transforming healthcare delivery in America. Dr. Pinckney holds a U.S. patent for an innovative surgical gown he developed while in medical school. He appears on nationally syndicated radio and news programs as 
+                a medical expert. And has recently received accolades from the Jackie Robinson Foundation and Super Doctors.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+<div class="modal-box2">
+    <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal5">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Joel Bessmer, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Medical Director, Members.MD<br>
+            Omaha, NE</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal5" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Joel Bessmer, M.D.</h2>
+            <p><span>Medical Director, Members.MD Omaha, NE</span>
+
+                Dr. Joel Bessmer is passionate about providing the highest quality of healthcare to his patients. After completing his medical education, he joined the University of Nebraska Medical Center faculty in 1997, serving as associate professor of internal medicine, associate director of the internal medicine program,
+                 co-director of the UNMC medicine/pediatrics residency program and medical director for three UNMC clinics.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal6">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Jordan Lipton, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Signature Healthcare<br>
+            Charlotte, NC</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal6" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Jordan Lipton, M.D.</h2>
+            <p><span>Signature Healthcare  Charlotte, NC</span>
+                Dr. Jordan D. Lipton is a practicing primary care physician, entrepreneur, writer, speaker, and community leader. He is a co-founder of Signature Healthcare and Signature Pediatrics, the Medical Advisory Board chairman and volunteer at the HeartBright Foundation, and sits on numerous additional philanthropic boards. Dr. Lipton is a graduate of University of Toronto and McGill University, and is a former emergency physician, who remains board-certified in the specialty. He is the recipient of several healthcare, entrepreneurial, and philanthropic awards and recognitions. Dr. Lipton and his family are avid travelers, 
+                and he has particular interest in world healthcare systems, culture, and art. He is fluent in English, French, and German.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="modal-box1">
+    <div class="modal-img" data-toggle="modal" data-target="#myModal7">
+        <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+    </div>
+    <div class="heading-modal">
+        <h3>Radley Griffin, M.D.</h3>
+    </div>
+    <div class="submenu">
+        <h6>Griffin Concierge Medical<br>
+            Tampa, F</h6>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal7" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        
+        <div class="modal-content">
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <div class="inner-modal">
+          <div class="modal-header">
+            <img src="https://2.bp.blogspot.com/-B2AIu6n6kTE/XJkQCZVyogI/AAAAAAAAC74/hQbH-HbF0KsLBjAgCdzFguG6aK56KxmGACLcBGAs/s1600/nature%2Bwallpaper%2B4.jpg">
+          </div>
+          <div class="modal-body">
+              <h2>Radley Griffin, M.D.</h2>
+            <p><span>Griffin Concierge Medical Tampa, F</span>
+
+                Dr. Radley Griffin, a board-certified family physician, is the founder and CEO of Griffin Concierge Medical in Tampa, Florida. After studying nutrition at the University of Florida, he attended Saba University School of Medicine. He completed his Family Medicine residency at the University of Florida where he was awarded the Physician Teacher of the Year. A passion for education has carried over to his private practice where he focuses on preventive medicine and the utilization of nutrition to reverse metabolic disease. Dr. Griffin enjoys collaborating with his colleagues in private medicine to promote best practices and to expand upon what he considers the only way to deliver primary care. Dr. Griffin served on the board of the American Academy of Private Physicians from 2014 to 2017. Whether educating established physicians who are interested in transitioning to private medicine or residents who are navigating their future employment options, Dr. Griffin is dedicated to growing the network of like-minded 
+                physicians who are focused on the delivery of high-quality care, patient quality of life and physician satisfaction.</p>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+</div>
+<div class="your-class">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+  </div>
+<script>
+ 
+$('.one-time').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
